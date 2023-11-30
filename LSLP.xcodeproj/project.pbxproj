@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B5B83372B14DCAD009E2CBB /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B83362B14DCAD009E2CBB /* Extension + String.swift */; };
+		8B634D4D2B1251D000CB8526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D4C2B1251D000CB8526 /* LogInViewController.swift */; };
+		8B634D502B12521800CB8526 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D4F2B12521800CB8526 /* BaseViewController.swift */; };
+		8B634D532B12559600CB8526 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D522B12559600CB8526 /* LogInViewModel.swift */; };
+		8B634D552B1255C100CB8526 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D542B1255C100CB8526 /* ViewModelType.swift */; };
+		8B634D582B13312E00CB8526 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D572B13312E00CB8526 /* SignTextField.swift */; };
+		8B634D5A2B13403F00CB8526 /* PointButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D592B13403F00CB8526 /* PointButton.swift */; };
+		8B634D5C2B134C1100CB8526 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D5B2B134C1100CB8526 /* APIManager.swift */; };
+		8B634D5F2B1371E000CB8526 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D5E2B1371E000CB8526 /* NetworkError.swift */; };
+		8B702C292B15AFFC00A79DAF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B702C282B15AFFC00A79DAF /* SignUpViewController.swift */; };
+		8B702C2B2B15B00D00A79DAF /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B702C2A2B15B00D00A79DAF /* SignUpViewModel.swift */; };
+		8B702C2D2B15F33400A79DAF /* LoggableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B702C2C2B15F33400A79DAF /* LoggableError.swift */; };
 		8B91171E2B0E3FE9001A82DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91171D2B0E3FE9001A82DC /* AppDelegate.swift */; };
 		8B9117202B0E3FE9001A82DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91171F2B0E3FE9001A82DC /* SceneDelegate.swift */; };
 		8B9117222B0E3FE9001A82DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9117212B0E3FE9001A82DC /* ViewController.swift */; };
@@ -16,6 +28,14 @@
 		8B9117352B0E3FEA001A82DC /* LSLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9117342B0E3FEA001A82DC /* LSLPTests.swift */; };
 		8B91173F2B0E3FEA001A82DC /* LSLPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B91173E2B0E3FEA001A82DC /* LSLPUITests.swift */; };
 		8B9117412B0E3FEA001A82DC /* LSLPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9117402B0E3FEA001A82DC /* LSLPUITestsLaunchTests.swift */; };
+		8B9117512B0E4290001A82DC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8B9117502B0E4290001A82DC /* Moya */; };
+		8B9117542B0E42D3001A82DC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8B9117532B0E42D3001A82DC /* RxCocoa */; };
+		8B9117562B0E42D3001A82DC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B9117552B0E42D3001A82DC /* RxSwift */; };
+		8B9117592B0E42E8001A82DC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B9117582B0E42E8001A82DC /* SnapKit */; };
+		8B91175D2B0E4417001A82DC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8B91175C2B0E4417001A82DC /* .gitignore */; };
+		8B9117632B0E4504001A82DC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9117622B0E4504001A82DC /* API.swift */; };
+		8B9117672B0E5A22001A82DC /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9117662B0E5A22001A82DC /* Request.swift */; };
+		8B9117692B0E5A36001A82DC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9117682B0E5A36001A82DC /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +56,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B5B83362B14DCAD009E2CBB /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
+		8B634D4C2B1251D000CB8526 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		8B634D4F2B12521800CB8526 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8B634D522B12559600CB8526 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		8B634D542B1255C100CB8526 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		8B634D572B13312E00CB8526 /* SignTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
+		8B634D592B13403F00CB8526 /* PointButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointButton.swift; sourceTree = "<group>"; };
+		8B634D5B2B134C1100CB8526 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8B634D5E2B1371E000CB8526 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8B702C282B15AFFC00A79DAF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8B702C2A2B15B00D00A79DAF /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		8B702C2C2B15F33400A79DAF /* LoggableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggableError.swift; sourceTree = "<group>"; };
 		8B91171A2B0E3FE9001A82DC /* LSLP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSLP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B91171D2B0E3FE9001A82DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B91171F2B0E3FE9001A82DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +81,10 @@
 		8B91173A2B0E3FEA001A82DC /* LSLPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSLPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B91173E2B0E3FEA001A82DC /* LSLPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLPUITests.swift; sourceTree = "<group>"; };
 		8B9117402B0E3FEA001A82DC /* LSLPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSLPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8B91175C2B0E4417001A82DC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8B9117622B0E4504001A82DC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8B9117662B0E5A22001A82DC /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		8B9117682B0E5A36001A82DC /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9117562B0E42D3001A82DC /* RxSwift in Frameworks */,
+				8B9117592B0E42E8001A82DC /* SnapKit in Frameworks */,
+				8B9117542B0E42D3001A82DC /* RxCocoa in Frameworks */,
+				8B9117512B0E4290001A82DC /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +116,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B5B83352B14DC98009E2CBB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8B5B83362B14DCAD009E2CBB /* Extension + String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8B634D4E2B12520D00CB8526 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8B634D4F2B12521800CB8526 /* BaseViewController.swift */,
+				8B634D542B1255C100CB8526 /* ViewModelType.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8B634D512B12558500CB8526 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				8B634D4C2B1251D000CB8526 /* LogInViewController.swift */,
+				8B634D522B12559600CB8526 /* LogInViewModel.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		8B634D562B13267100CB8526 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				8B634D572B13312E00CB8526 /* SignTextField.swift */,
+				8B634D592B13403F00CB8526 /* PointButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		8B634D5D2B1371A300CB8526 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8B634D5E2B1371E000CB8526 /* NetworkError.swift */,
+				8B702C2C2B15F33400A79DAF /* LoggableError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		8B702C272B15AFE400A79DAF /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				8B702C282B15AFFC00A79DAF /* SignUpViewController.swift */,
+				8B702C2A2B15B00D00A79DAF /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		8B9117112B0E3FE9001A82DC = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +192,8 @@
 		8B91171C2B0E3FE9001A82DC /* LSLP */ = {
 			isa = PBXGroup;
 			children = (
+				8B91174D2B0E411B001A82DC /* Network */,
+				8B91174E2B0E4149001A82DC /* Presentation */,
 				8B91171D2B0E3FE9001A82DC /* AppDelegate.swift */,
 				8B91171F2B0E3FE9001A82DC /* SceneDelegate.swift */,
 				8B9117212B0E3FE9001A82DC /* ViewController.swift */,
@@ -106,6 +201,7 @@
 				8B9117262B0E3FEA001A82DC /* Assets.xcassets */,
 				8B9117282B0E3FEA001A82DC /* LaunchScreen.storyboard */,
 				8B91172B2B0E3FEA001A82DC /* Info.plist */,
+				8B91175C2B0E4417001A82DC /* .gitignore */,
 			);
 			path = LSLP;
 			sourceTree = "<group>";
@@ -127,6 +223,30 @@
 			path = LSLPUITests;
 			sourceTree = "<group>";
 		};
+		8B91174D2B0E411B001A82DC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8B634D5D2B1371A300CB8526 /* Error */,
+				8B9117622B0E4504001A82DC /* API.swift */,
+				8B9117662B0E5A22001A82DC /* Request.swift */,
+				8B9117682B0E5A36001A82DC /* Response.swift */,
+				8B634D5B2B134C1100CB8526 /* APIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8B91174E2B0E4149001A82DC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8B702C272B15AFE400A79DAF /* SignUp */,
+				8B5B83352B14DC98009E2CBB /* Extension */,
+				8B634D562B13267100CB8526 /* CustomView */,
+				8B634D4E2B12520D00CB8526 /* Base */,
+				8B634D512B12558500CB8526 /* LogIn */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +263,12 @@
 			dependencies = (
 			);
 			name = LSLP;
+			packageProductDependencies = (
+				8B9117502B0E4290001A82DC /* Moya */,
+				8B9117532B0E42D3001A82DC /* RxCocoa */,
+				8B9117552B0E42D3001A82DC /* RxSwift */,
+				8B9117582B0E42E8001A82DC /* SnapKit */,
+			);
 			productName = LSLP;
 			productReference = 8B91171A2B0E3FE9001A82DC /* LSLP.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +341,11 @@
 				Base,
 			);
 			mainGroup = 8B9117112B0E3FE9001A82DC;
+			packageReferences = (
+				8B91174F2B0E4290001A82DC /* XCRemoteSwiftPackageReference "Moya" */,
+				8B9117522B0E42D3001A82DC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8B9117572B0E42E8001A82DC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8B91171B2B0E3FE9001A82DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B91175D2B0E4417001A82DC /* .gitignore in Resources */,
 				8B91172A2B0E3FEA001A82DC /* LaunchScreen.storyboard in Resources */,
 				8B9117272B0E3FEA001A82DC /* Assets.xcassets in Resources */,
 				8B9117252B0E3FE9001A82DC /* Main.storyboard in Resources */,
@@ -259,8 +391,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B9117222B0E3FE9001A82DC /* ViewController.swift in Sources */,
+				8B634D5F2B1371E000CB8526 /* NetworkError.swift in Sources */,
+				8B5B83372B14DCAD009E2CBB /* Extension + String.swift in Sources */,
+				8B9117672B0E5A22001A82DC /* Request.swift in Sources */,
+				8B634D5A2B13403F00CB8526 /* PointButton.swift in Sources */,
+				8B702C2D2B15F33400A79DAF /* LoggableError.swift in Sources */,
+				8B634D582B13312E00CB8526 /* SignTextField.swift in Sources */,
 				8B91171E2B0E3FE9001A82DC /* AppDelegate.swift in Sources */,
+				8B9117632B0E4504001A82DC /* API.swift in Sources */,
+				8B634D532B12559600CB8526 /* LogInViewModel.swift in Sources */,
+				8B702C2B2B15B00D00A79DAF /* SignUpViewModel.swift in Sources */,
+				8B634D4D2B1251D000CB8526 /* LogInViewController.swift in Sources */,
+				8B702C292B15AFFC00A79DAF /* SignUpViewController.swift in Sources */,
+				8B634D502B12521800CB8526 /* BaseViewController.swift in Sources */,
 				8B9117202B0E3FE9001A82DC /* SceneDelegate.swift in Sources */,
+				8B634D5C2B134C1100CB8526 /* APIManager.swift in Sources */,
+				8B634D552B1255C100CB8526 /* ViewModelType.swift in Sources */,
+				8B9117692B0E5A36001A82DC /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +748,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B91174F2B0E4290001A82DC /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		8B9117522B0E42D3001A82DC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		8B9117572B0E42E8001A82DC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B9117502B0E4290001A82DC /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B91174F2B0E4290001A82DC /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		8B9117532B0E42D3001A82DC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B9117522B0E42D3001A82DC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8B9117552B0E42D3001A82DC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B9117522B0E42D3001A82DC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		8B9117582B0E42E8001A82DC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B9117572B0E42E8001A82DC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B9117122B0E3FE9001A82DC /* Project object */;
 }
