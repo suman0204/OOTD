@@ -9,12 +9,12 @@ import UIKit
 
 class PointButton: UIButton {
     
-    init(title: String) {
+    init(title: String, setbackgroundColor: UIColor) {
         super.init(frame: .zero)
         
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
-        backgroundColor = .black
+        backgroundColor = setbackgroundColor
         layer.cornerRadius = 10
         layer.borderWidth = 1
     }

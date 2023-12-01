@@ -16,28 +16,40 @@ class SignUpViewModel: ViewModelType {
     struct Input {
         let email: ControlProperty<String>
         let password: ControlProperty<String>
+        let nickname: ControlProperty<String>
         let emailValidateButtonClicked: ControlEvent<Void>
-        let singUpButtonClicked: ControlEvent<Void>
+        let signUpButtonClicked: ControlEvent<Void>
     }
     
     struct Output {
-        let emailValidateButtonEnabled: Observable<Bool>
+        let emailValidateButtonEnabled: BehaviorSubject<Bool>
         let emailValidateResponse: PublishRelay<EmailValidationResponse>
-        let errorMessage: PublishRelay<String>
+        let emailErrorMessage: PublishRelay<String>
+        
+        let signUpResponse: PublishRelay<JoinResponse>
+        let signUpErrorMessage: PublishRelay<String>
+        
 //        let singUpButtonEnabled: Observable<Bool>
     }
     
     func transform(input: Input) -> Output {
         
-        let emailValidateEnabled = input.email
+        let emailValidateEnabled = BehaviorSubject(value: false)
+        let emailValidateResponse = PublishRelay<EmailValidationResponse>()
+        let emailErrorMessage = PublishRelay<String>()
+        
+        let signUpResponse = PublishRelay<JoinResponse>()
+        let signUpErrorMessage = PublishRelay<String>()
+        
+        input.email
             .map {
                 $0.isValidEmail()
             }
-        
-        let emailValidateResponse = PublishRelay<EmailValidationResponse>()
-        let errorMessage = PublishRelay<String>()
+            .bind(to: emailValidateEnabled)
+            .disposed(by: disposeBag)
         
         input.emailValidateButtonClicked
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .withLatestFrom(input.email) { void, email in
                 return email
             }
@@ -50,10 +62,10 @@ class SignUpViewModel: ViewModelType {
                     emailValidateResponse.accept(value)
                 case .failure(let error):
                     guard let emailValidationError = EmailValidationError(rawValue: error.rawValue) else {
-                        errorMessage.accept(error.errorDescription)
+                        emailErrorMessage.accept(error.errorDescription)
                         return
                     }
-                    errorMessage.accept(emailValidationError.errorDescription)
+                    emailErrorMessage.accept(emailValidationError.errorDescription)
                 }
 
             }
@@ -70,8 +82,29 @@ class SignUpViewModel: ViewModelType {
 //            }
 //            .disposed(by: disposeBag)
         
-//        let signUpData = Observable.combineLatest(input.email, input.password)
-//        
+        let signUpData = Observable.combineLatest(input.email, input.password, input.nickname)
+//            .debug()
+//
+
+        input.signUpButtonClicked
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .withLatestFrom(signUpData)
+            .debug()
+            .flatMapLatest { email, password, nickname in
+                APIManager.shared.signUpRequest(api: .signUp(model: Join(email: email, password: password, nick: nickname)))
+            }
+            .subscribe(with: self) { owner, result in
+                switch result {
+                case.success(let value):
+                    print("SignUp Value", value)
+                    signUpResponse.accept(value)
+                case.failure(let error):
+                    print("SignUp Error", error)
+                    signUpErrorMessage.accept(error.errorDescription)
+                }
+            }
+            .disposed(by: disposeBag)
+        
 //        let singUpButtonClicked = input.singUpButtonClicked
 //            .throttle(.seconds(1), scheduler: MainScheduler.instance)
 //            .withLatestFrom(signUpData)
@@ -79,6 +112,6 @@ class SignUpViewModel: ViewModelType {
 //                APIManager.shared.
 //            }
         
-        return Output(emailValidateButtonEnabled: emailValidateEnabled, emailValidateResponse: emailValidateResponse, errorMessage: errorMessage)
+        return Output(emailValidateButtonEnabled: emailValidateEnabled, emailValidateResponse: emailValidateResponse, emailErrorMessage: emailErrorMessage, signUpResponse: signUpResponse, signUpErrorMessage: signUpErrorMessage)
     }
 }

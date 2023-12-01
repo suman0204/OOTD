@@ -37,7 +37,7 @@ class LogInViewModel: ViewModelType {
         
         loginInput
             .map {
-                $0.0.isValidEmail() && $0.1.count > 4
+                $0.0.isValidEmail() && $0.1.count > 3
             }
             .bind { bool in
                 logInButtonEnabled.accept(bool)

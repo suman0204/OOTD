@@ -8,7 +8,7 @@
 import Foundation
 
 struct Join: Encodable {
-    let eamil: String
+    let email: String
     let password: String
     let nick: String
 }

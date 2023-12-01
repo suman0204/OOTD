@@ -14,7 +14,7 @@ class LogInViewController: BaseViewController {
     
     let emailTextField = SignTextField(placeholderText: "이메일을 입력해주세요")
     let passwordTextField = SignTextField(placeholderText: "비밀번호를 입력해주세요")
-    let logInButton = PointButton(title: "로그인")
+    let logInButton = PointButton(title: "로그인", setbackgroundColor: .black)
     let signUpButton = {
         let button = UIButton()
         button.setTitle("회원이 아니십니까?", for: .normal)
@@ -30,6 +30,12 @@ class LogInViewController: BaseViewController {
         super.viewDidLoad()
         
         bind()
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
+    }
+    
+   @objc func signUpButtonClicked() {
+       self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
     
     func bind() {
@@ -38,8 +44,9 @@ class LogInViewController: BaseViewController {
         let output = viewModel.transform(input: input)
         
         output.logInButtonEnabled
+//            .debug()
             .bind(with: self, onNext: { owner, bool in
-                owner.signUpButton.rx.isEnabled.onNext(bool)
+                owner.logInButton.rx.isEnabled.onNext(bool)
             })
             .disposed(by: disposeBag)
         
@@ -54,15 +61,18 @@ class LogInViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         output.logInResponse
-            .subscribe(with: self) { owener, response in
+            .subscribe(with: self) { owner, response in
                 print("Login Response", response)
+                owner.navigationController?.pushViewController(PostedView(), animated: true)
             }
             .disposed(by: disposeBag)
         
         output.errorMessage
             .subscribe(with: self) { owner, error in
                 print("Error Response", error)
+                
             }
+            .disposed(by: disposeBag)
     }
     
     override func configureView() {

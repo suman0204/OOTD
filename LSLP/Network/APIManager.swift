@@ -77,6 +77,33 @@ final class APIManager {
             return Disposables.create()
         }
     }
+    
+    func signUpRequest(api: API) -> Single<CustomResult<JoinResponse, LoggableError>> {
+        return Single.create { single in
+            self.provider.request(api) { result in
+                switch result {
+                case.success(let value):
+                    print("Request Success", value.statusCode, value.data)
+
+                    guard let data = try? JSONDecoder().decode(JoinResponse.self, from: value.data) else {
+                        return
+                    }
+                    single(.success(.success(data)))
+                case.failure(let error):
+                    
+                    print("Request Error", error)
+
+                    guard let statusCode = error.response?.statusCode, let commonError = CommonError(rawValue: statusCode) else {
+                        single(.success(.failure(CommonError.unknownError)))
+                        return
+                    }
+                    
+                    single(.success(.failure(commonError)))
+                }
+            }
+            return Disposables.create()
+        }
+    }
 //    func emailValidateRequest(api: API) -> Observable<EmailValidationResponse> {
 //        return Observable.create { observer in
 //            self.provider.request(api) { result in

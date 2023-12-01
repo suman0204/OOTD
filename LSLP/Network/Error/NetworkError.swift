@@ -73,7 +73,7 @@ enum LogInError: Int, LoggableError {
         case .requiredValue:
             return "필수값을 채워주세요. (이메일, 비밀번호)"
         case .noUserWrongPassword:
-            return "계정을 확인해주시요 (미가입 or 비밀번호 불일치)"
+            return "계정을 확인해주세요 (미가입 or 비밀번호 불일치)"
         }
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B4ADDAF2B1865990030E88A /* PostedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4ADDAE2B1865990030E88A /* PostedView.swift */; };
+		8B4ADDB52B18CB6A0030E88A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4ADDB42B18CB6A0030E88A /* KeychainManager.swift */; };
 		8B5B83372B14DCAD009E2CBB /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B83362B14DCAD009E2CBB /* Extension + String.swift */; };
 		8B634D4D2B1251D000CB8526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D4C2B1251D000CB8526 /* LogInViewController.swift */; };
 		8B634D502B12521800CB8526 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D4F2B12521800CB8526 /* BaseViewController.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B4ADDAE2B1865990030E88A /* PostedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedView.swift; sourceTree = "<group>"; };
+		8B4ADDB42B18CB6A0030E88A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		8B5B83362B14DCAD009E2CBB /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		8B634D4C2B1251D000CB8526 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		8B634D4F2B12521800CB8526 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B4ADDAD2B1865460030E88A /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				8B4ADDAE2B1865990030E88A /* PostedView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 		8B5B83352B14DC98009E2CBB /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +206,7 @@
 			children = (
 				8B91174D2B0E411B001A82DC /* Network */,
 				8B91174E2B0E4149001A82DC /* Presentation */,
+				8B4ADDB42B18CB6A0030E88A /* KeychainManager.swift */,
 				8B91171D2B0E3FE9001A82DC /* AppDelegate.swift */,
 				8B91171F2B0E3FE9001A82DC /* SceneDelegate.swift */,
 				8B9117212B0E3FE9001A82DC /* ViewController.swift */,
@@ -238,11 +251,12 @@
 		8B91174E2B0E4149001A82DC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				8B702C272B15AFE400A79DAF /* SignUp */,
 				8B5B83352B14DC98009E2CBB /* Extension */,
 				8B634D562B13267100CB8526 /* CustomView */,
 				8B634D4E2B12520D00CB8526 /* Base */,
+				8B702C272B15AFE400A79DAF /* SignUp */,
 				8B634D512B12558500CB8526 /* LogIn */,
+				8B4ADDAD2B1865460030E88A /* Post */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -397,6 +411,7 @@
 				8B634D5A2B13403F00CB8526 /* PointButton.swift in Sources */,
 				8B702C2D2B15F33400A79DAF /* LoggableError.swift in Sources */,
 				8B634D582B13312E00CB8526 /* SignTextField.swift in Sources */,
+				8B4ADDAF2B1865990030E88A /* PostedView.swift in Sources */,
 				8B91171E2B0E3FE9001A82DC /* AppDelegate.swift in Sources */,
 				8B9117632B0E4504001A82DC /* API.swift in Sources */,
 				8B634D532B12559600CB8526 /* LogInViewModel.swift in Sources */,
@@ -404,6 +419,7 @@
 				8B634D4D2B1251D000CB8526 /* LogInViewController.swift in Sources */,
 				8B702C292B15AFFC00A79DAF /* SignUpViewController.swift in Sources */,
 				8B634D502B12521800CB8526 /* BaseViewController.swift in Sources */,
+				8B4ADDB52B18CB6A0030E88A /* KeychainManager.swift in Sources */,
 				8B9117202B0E3FE9001A82DC /* SceneDelegate.swift in Sources */,
 				8B634D5C2B134C1100CB8526 /* APIManager.swift in Sources */,
 				8B634D552B1255C100CB8526 /* ViewModelType.swift in Sources */,
