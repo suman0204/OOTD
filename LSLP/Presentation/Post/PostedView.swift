@@ -18,8 +18,24 @@ class PostedView: BaseViewController {
         return view
     }()
     
+    lazy var postingButton = {
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(postingButtonClicked))
+        button.tintColor = .black
+        
+        return button
+    }()
+    
+    @objc func postingButtonClicked() {
+        print("postingButtonClicked")
+        self.navigationController?.pushViewController(PostingViewController(), animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Token",KeychainManager.shared.read(account: "token"))
+        print("RefreshToken",KeychainManager.shared.read(account: "refreshToken"))
+        
+        navigationItem.rightBarButtonItem = postingButton
     }
     
     override func configureView() {

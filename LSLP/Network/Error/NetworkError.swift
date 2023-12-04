@@ -77,3 +77,26 @@ enum LogInError: Int, LoggableError {
         }
     }
 }
+
+enum PostError: Int, LoggableError {
+    case wrongRequset = 400
+    case wrongToken = 401
+    case forbidden = 403
+    case notExisting = 410
+    case expiredToken = 419
+    
+    var errorDescription: String {
+        switch self {
+        case .wrongRequset:
+            "잘못된 요청입니다. (파일이 제한 사항과 맞지 않습니다.)"
+        case .wrongToken:
+            "인증할 수 없는 액세스 토큰입니다.(유효하지 않은 엑세스 토큰)"
+        case .forbidden:
+            "Forbidden (접근권한이 없습니다.)"
+        case .notExisting:
+            "생성된 게시글이 없습니다. (서버 장애로 게시글이 저장되지 않았습니다.)"
+        case .expiredToken:
+            "액세스 토큰이 만료되었습니다."
+        }
+    }
+}

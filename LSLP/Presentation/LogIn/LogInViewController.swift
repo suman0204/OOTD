@@ -32,6 +32,10 @@ class LogInViewController: BaseViewController {
         bind()
         
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
+        
+//        if KeychainManager.shared.read(account: "token") != nil {
+//            self.navigationController?.pushViewController(PostedView(), animated: true)
+//        }
     }
     
    @objc func signUpButtonClicked() {
@@ -64,6 +68,8 @@ class LogInViewController: BaseViewController {
             .subscribe(with: self) { owner, response in
                 print("Login Response", response)
                 owner.navigationController?.pushViewController(PostedView(), animated: true)
+                KeychainManager.shared.create(account: "token", value: response.token)
+                KeychainManager.shared.create(account: "refreshToken", value: response.refreshToken)
             }
             .disposed(by: disposeBag)
         

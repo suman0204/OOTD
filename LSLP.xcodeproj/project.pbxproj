@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B4ADDAF2B1865990030E88A /* PostedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4ADDAE2B1865990030E88A /* PostedView.swift */; };
 		8B4ADDB52B18CB6A0030E88A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4ADDB42B18CB6A0030E88A /* KeychainManager.swift */; };
+		8B4ADDF32B1B77DD0030E88A /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4ADDF22B1B77DD0030E88A /* PostingViewController.swift */; };
+		8B4ADDF62B1CD5BD0030E88A /* PostingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4ADDF52B1CD5BD0030E88A /* PostingViewModel.swift */; };
 		8B5B83372B14DCAD009E2CBB /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5B83362B14DCAD009E2CBB /* Extension + String.swift */; };
 		8B634D4D2B1251D000CB8526 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D4C2B1251D000CB8526 /* LogInViewController.swift */; };
 		8B634D502B12521800CB8526 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B634D4F2B12521800CB8526 /* BaseViewController.swift */; };
@@ -60,6 +62,8 @@
 /* Begin PBXFileReference section */
 		8B4ADDAE2B1865990030E88A /* PostedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedView.swift; sourceTree = "<group>"; };
 		8B4ADDB42B18CB6A0030E88A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		8B4ADDF22B1B77DD0030E88A /* PostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
+		8B4ADDF52B1CD5BD0030E88A /* PostingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingViewModel.swift; sourceTree = "<group>"; };
 		8B5B83362B14DCAD009E2CBB /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		8B634D4C2B1251D000CB8526 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		8B634D4F2B12521800CB8526 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -124,8 +128,18 @@
 			isa = PBXGroup;
 			children = (
 				8B4ADDAE2B1865990030E88A /* PostedView.swift */,
+				8B4ADDF42B1CD5AF0030E88A /* Posting */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		8B4ADDF42B1CD5AF0030E88A /* Posting */ = {
+			isa = PBXGroup;
+			children = (
+				8B4ADDF22B1B77DD0030E88A /* PostingViewController.swift */,
+				8B4ADDF52B1CD5BD0030E88A /* PostingViewModel.swift */,
+			);
+			path = Posting;
 			sourceTree = "<group>";
 		};
 		8B5B83352B14DC98009E2CBB /* Extension */ = {
@@ -405,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B9117222B0E3FE9001A82DC /* ViewController.swift in Sources */,
+				8B4ADDF62B1CD5BD0030E88A /* PostingViewModel.swift in Sources */,
 				8B634D5F2B1371E000CB8526 /* NetworkError.swift in Sources */,
 				8B5B83372B14DCAD009E2CBB /* Extension + String.swift in Sources */,
 				8B9117672B0E5A22001A82DC /* Request.swift in Sources */,
@@ -412,6 +427,7 @@
 				8B702C2D2B15F33400A79DAF /* LoggableError.swift in Sources */,
 				8B634D582B13312E00CB8526 /* SignTextField.swift in Sources */,
 				8B4ADDAF2B1865990030E88A /* PostedView.swift in Sources */,
+				8B4ADDF32B1B77DD0030E88A /* PostingViewController.swift in Sources */,
 				8B91171E2B0E3FE9001A82DC /* AppDelegate.swift in Sources */,
 				8B9117632B0E4504001A82DC /* API.swift in Sources */,
 				8B634D532B12559600CB8526 /* LogInViewModel.swift in Sources */,

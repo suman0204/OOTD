@@ -31,3 +31,23 @@ struct WithdrawResponse: Decodable {
     let email: String
     let nick: String
 }
+
+struct PostResponse: Decodable {
+    let likes, image, hashTags: [String?]
+    let _id, time/*, content*/, product_id: String
+    let creator: Creator
+    let comments: [Comments]
+}
+
+struct Creator: Decodable {
+    let _id: String
+    let nick: String
+    let profile: String?
+}
+
+struct Comments: Decodable {
+    let _id: String
+    let content: String
+    let time: String
+    let creator: Creator
+}

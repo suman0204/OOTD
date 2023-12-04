@@ -35,7 +35,7 @@ final class KeychainManager {
     }
     
     //Read 메서드
-    func read(account: String, value: String) -> String? {
+    func read(account: String) -> String? {
         
         //query
         let query: NSDictionary = [

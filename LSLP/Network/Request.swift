@@ -21,3 +21,9 @@ struct LoginIn: Encodable {
     let email: String
     let password: String
 }
+
+struct Post: Encodable {
+    let content: String
+//    let file: Data
+    let product_id: String 
+}
