@@ -24,6 +24,6 @@ struct LoginIn: Encodable {
 
 struct Post: Encodable {
     let content: String
-//    let file: Data
+    let file: Data
     let product_id: String 
 }

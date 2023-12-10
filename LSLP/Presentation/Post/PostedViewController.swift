@@ -10,7 +10,9 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class PostedView: BaseViewController {
+class PostedViewController: BaseViewController {
+    
+    let disposeBag = DisposeBag()
     
     let titleLabel = {
         let view = UILabel()
@@ -24,6 +26,28 @@ class PostedView: BaseViewController {
         
         return button
     }()
+    
+    lazy var refreshButton = {
+        let button = UIButton(frame: .zero)
+        button.setTitle("Refresh", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.addTarget(self, action: #selector(refresh), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func refresh() {
+        print("refresh click")
+        APIManager.shared.refresh(api: .refresh)
+            .subscribe(with: self) { owner, result in
+                switch result {
+                case.success(let response):
+                    print(response)
+                case.failure(let error):
+                    print(error)
+                }
+            }
+            .disposed(by: disposeBag)
+    }
     
     @objc func postingButtonClicked() {
         print("postingButtonClicked")
@@ -41,6 +65,8 @@ class PostedView: BaseViewController {
     override func configureView() {
         view.backgroundColor = .white
         view.addSubview(titleLabel)
+        view.addSubview(refreshButton)
+
     }
     
     override func setConstraints() {
@@ -48,6 +74,11 @@ class PostedView: BaseViewController {
             make.top.equalTo(view.safeAreaLayoutGuide).offset(100)
             make.height.equalTo(50)
             make.horizontalEdges.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        
+        refreshButton.snp.makeConstraints { make in
+            make.size.equalTo(100)
+            make.top.equalTo(titleLabel.snp.bottom).offset(100)
         }
     }
 }

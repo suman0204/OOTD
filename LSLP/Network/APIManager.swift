@@ -20,7 +20,7 @@ final class APIManager {
     
     private init() { }
     
-    let provider = MoyaProvider<API>()
+    let provider = MoyaProvider<API>(session: Session(interceptor: Interceptor.shared))
     
     func loginRequest(api: API) -> Single<CustomResult<LogInResponse, LoggableError>>{
         return Single.create { single in
@@ -126,6 +126,59 @@ final class APIManager {
                         return
                     }
                     
+                    single(.success(.failure(commonError)))
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func getPostRequset(api: API) -> Single<CustomResult<GetPostResponse, LoggableError>> {
+        return Single.create { single in
+            self.provider.request(api) { result in
+                switch result {
+                case.success(let response):
+                    print("Get Post Success", response.statusCode)
+                    
+                    guard let data = try? JSONDecoder().decode(GetPostResponse.self, from: response.data) else {
+                        return
+                    }
+                    
+                    single(.success(.success(data)))
+                    
+                case.failure(let error):
+                    print("Get Post Error", error)
+                    
+                    guard let statusCode = error.response?.statusCode, let commonError = CommonError(rawValue: statusCode) else {
+                        single(.success(.failure(CommonError.unknownError)))
+                        return
+                    }
+                    single(.success(.failure(commonError)))
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func refresh(api: API) -> Single<CustomResult<RefreshResponse, LoggableError>> {
+        return Single.create { single in
+            self.provider.request(api) { result in
+                switch result {
+                case .success(let response):
+                    print("Refresh Success", response.statusCode)
+                    
+                    guard let data = try? JSONDecoder().decode(RefreshResponse.self, from: response.data) else {
+                        return
+                    }
+                    
+                    single(.success(.success(data)))
+                case .failure(let error):
+                    print("Refresh Error", error)
+                    
+                    guard let statusCode = error.response?.statusCode, let commonError = CommonError(rawValue: statusCode) else {
+                        single(.success(.failure(CommonError.unknownError)))
+                        return
+                    }
                     single(.success(.failure(commonError)))
                 }
             }

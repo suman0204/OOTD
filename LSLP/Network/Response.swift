@@ -34,7 +34,7 @@ struct WithdrawResponse: Decodable {
 
 struct PostResponse: Decodable {
     let likes, image, hashTags: [String?]
-    let _id, time/*, content*/, product_id: String
+    let _id, time, content, product_id: String
     let creator: Creator
     let comments: [Comments]
 }
@@ -50,4 +50,9 @@ struct Comments: Decodable {
     let content: String
     let time: String
     let creator: Creator
+}
+
+struct GetPostResponse: Decodable {
+    let data: [PostResponse]
+    let next_cursor: String
 }

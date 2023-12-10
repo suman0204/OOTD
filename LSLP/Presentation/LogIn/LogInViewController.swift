@@ -34,7 +34,7 @@ class LogInViewController: BaseViewController {
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
         
 //        if KeychainManager.shared.read(account: "token") != nil {
-//            self.navigationController?.pushViewController(PostedView(), animated: true)
+//            self.navigationController?.pushViewController(PostedViewController(), animated: true)
 //        }
     }
     
@@ -67,7 +67,7 @@ class LogInViewController: BaseViewController {
         output.logInResponse
             .subscribe(with: self) { owner, response in
                 print("Login Response", response)
-                owner.navigationController?.pushViewController(PostedView(), animated: true)
+                owner.navigationController?.pushViewController(PostedViewController(), animated: true)
                 KeychainManager.shared.create(account: "token", value: response.token)
                 KeychainManager.shared.create(account: "refreshToken", value: response.refreshToken)
             }

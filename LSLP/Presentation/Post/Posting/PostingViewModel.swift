@@ -13,6 +13,8 @@ class PostingViewModel: ViewModelType {
     
     let disposeBag = DisposeBag()
     
+    let imageData: PublishSubject<[Data]> = PublishSubject()
+    
     struct Input {
         let content: ControlProperty<String>
         let postingButtonClicked: ControlEvent<Void>
@@ -28,11 +30,13 @@ class PostingViewModel: ViewModelType {
         let postResponse = PublishRelay<PostResponse>()
         let errorMessage = PublishRelay<String>()
 
+        let postData = Observable.combineLatest(input.content, imageData)
+        
         input.postingButtonClicked
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
-            .withLatestFrom(input.content)
-            .flatMap { content in
-                APIManager.shared.postRequest(api: .post(model: Post(content: content, product_id: "test0204")))
+            .withLatestFrom(postData)
+            .flatMap { data in
+                APIManager.shared.postRequest(api: .post(model: Post(content: data.0, file: data.1.first ?? Data(), product_id: "test0204")))
             }
             .subscribe(with: self) { owner, response in
                 switch response {
@@ -41,6 +45,7 @@ class PostingViewModel: ViewModelType {
                     postResponse.accept(result)
                 case .failure(let error):
                     print(error)
+                    print(error.rawValue)
                     guard let postError = PostError(rawValue: error.rawValue) else {
                         errorMessage.accept(error.errorDescription)
                         return
