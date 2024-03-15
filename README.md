@@ -153,7 +153,7 @@ func loginRequest(api: API) -> Single<CustomResult<LogInResponse, LoggableError>
 
 **문제점**
 
-네트워크 요청 과정에서 성공과 실패에 대해서만 관리할 수 있는 **RxSwift**의 **Single**을 활용하였으나 **single(.failure(error)**를 return 하는 경우 flatMap으로 연결된  **Stream이 dispose**되어 다시 요청할 수 없는 문제가 발생
+네트워크 요청 과정에서 성공과 실패에 대해서만 관리할 수 있는 **RxSwift**의 **Single**을 활용하였으나 **single(.failure(error))를** return 하는 경우 **flatMap**으로 연결된  **Stream이 dispose**되어 다시 요청할 수 없는 문제가 발생
 
 ```swift
 func signUpRequest(api: API) -> Single<CustomResult<JoinResponse, LoggableError>> {
