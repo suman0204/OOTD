@@ -4,7 +4,6 @@
 
 # OOTD
 
----
 
 **코디 정보를 공유하는 커뮤니티 앱**
 
@@ -18,7 +17,6 @@
 
 ## 프로젝트 소개
 
----
 
 > 앱 소개
 > 
@@ -57,9 +55,10 @@
 
 ---
 
+<br/>
+
 ## 트러블 슈팅
 
----
 
 ### 1. 네트워크 에러 핸들링 해결법
 
@@ -96,6 +95,8 @@ enum CommonError: Int, LoggableError {
 }
 ...
 ```
+
+<br/>
 
 **해결법**
 
@@ -140,6 +141,8 @@ func loginRequest(api: API) -> Single<CustomResult<LogInResponse, LoggableError>
 }
 ```
 
+<br/>
+
 ---
 
 ### 2. RxSwift Single의 failure로 에러 방출 시 스트림 종료 문제
@@ -167,6 +170,8 @@ func signUpRequest(api: API) -> Single<CustomResult<JoinResponse, LoggableError>
     }
 }
 ```
+
+<br/>
 
 **해결법**
 
