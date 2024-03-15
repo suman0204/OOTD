@@ -7,6 +7,8 @@
 
 **코디 정보를 공유하는 커뮤니티 앱**
 
+<br/>
+
 <p align="center">
 <img src="https://github.com/suman0204/OOTD/assets/18048754/4d2bceec-4efb-421b-9d61-a6d50c888799" width="19%" height="20%">
 <img src="https://github.com/suman0204/OOTD/assets/18048754/4e8e0aaa-0da1-41b2-bd46-42f11172f37f" width="19%" height="20%">
@@ -14,6 +16,8 @@
 <img src="https://github.com/suman0204/OOTD/assets/18048754/3f2c0617-caba-4360-8678-8da509da04d3" width="19%" height="20%">
 <img src="https://github.com/suman0204/OOTD/assets/18048754/449bd201-5269-47a3-b040-788e553318cb" width="19%" height="20%">
 </p>
+
+<br/>
 
 ## 프로젝트 소개
 
