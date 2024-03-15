@@ -9,11 +9,11 @@
 **코디 정보를 공유하는 커뮤니티 앱**
 
 <p align="center">
-<img src="https://github.com/suman0204/MyPick/assets/18048754/3839fd3b-a8fa-4ebe-93b7-a793cef7ec61" width="19%" height="20%">
-<img src="https://github.com/suman0204/MyPick/assets/18048754/4c105f19-19f1-4c01-965b-111d53296ece" width="19%" height="20%">
-<img src="https://github.com/suman0204/MyPick/assets/18048754/25221450-dbe2-46c4-afb8-8575ff515bc9" width="19%" height="20%">
-<img src="https://github.com/suman0204/MyPick/assets/18048754/4804f457-8269-4bd1-970d-fe07af0cf6a3" width="19%" height="20%">
-<img src="https://github.com/suman0204/MyPick/assets/18048754/f27946fd-f299-4704-9bee-e74271d2801d" width="19%" height="20%">
+<img src="https://github.com/suman0204/OOTD/assets/18048754/4d2bceec-4efb-421b-9d61-a6d50c888799" width="19%" height="20%">
+<img src="https://github.com/suman0204/OOTD/assets/18048754/4e8e0aaa-0da1-41b2-bd46-42f11172f37f" width="19%" height="20%">
+<img src="https://github.com/suman0204/OOTD/assets/18048754/ce7877cf-6efe-42d0-bf8a-7922b46a2bf0" width="19%" height="20%">
+<img src="https://github.com/suman0204/OOTD/assets/18048754/3f2c0617-caba-4360-8678-8da509da04d3" width="19%" height="20%">
+<img src="https://github.com/suman0204/OOTD/assets/18048754/449bd201-5269-47a3-b040-788e553318cb" width="19%" height="20%">
 </p>
 
 ## 프로젝트 소개
