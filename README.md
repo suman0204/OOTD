@@ -21,6 +21,21 @@
 
 ## 프로젝트 소개
 
+> 개발 환경
+> 
+- 최소 버전 : iOS 16.0
+- 개발 인원: 1인
+- 개발 기간: 2023.11.22 ~ 2023.12.17
+
+---
+
+> 기술 스택
+> 
+- UIKit(CodeBase), PhotosUI, KeyChain
+- MVVM, Input/Output, Singleton, DTO
+- RxSwift, Moya, Alamofire, Snapkit, Kingfisher
+
+---
 
 > 앱 소개
 > 
@@ -40,22 +55,6 @@
 - **Custom Result**와 **Custom Error** 구성을 통한 **에러 핸들링**
 - **Cursor Based Pagination**을 통한 데이터 갱신
 - **multipart/form-data** 를 통한 이미지 및 텍스트 데이터 업로드
-
----
-
-> 개발 환경
-> 
-- 최소 버전 : iOS 16.0
-- 개발 인원: 1인
-- 개발 기간: 2023.11.22 ~ 2023.12.17
-
----
-
-> 기술 스택
-> 
-- UIKit, PhotosUI, KeyChain
-- RxSwift, Moya, Alamofire, Snapkit, Kingfisher
-- MVVM, Input/Output, Singleton, DTO
 
 ---
 
