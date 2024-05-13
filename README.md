@@ -29,19 +29,19 @@
 
 ---
 
-> 기술 스택
-> 
-- UIKit(CodeBase), PhotosUI, KeyChain
-- MVVM, Input/Output, Singleton, DTO
-- RxSwift, Moya, Alamofire, Snapkit, Kingfisher
-
----
-
 > 앱 소개
 > 
 - 회원가입, 로그인 기능
 - 사진과 텍스트 기반 게시글 업로드
 - 유저들이 올린 게시물 확인
+
+---
+
+> 기술 스택
+> 
+- UIKit(CodeBase), PhotosUI, KeyChain
+- MVVM, Input/Output, Singleton, DTO
+- RxSwift, Moya, Alamofire, Snapkit, Kingfisher
 
 ---
 
